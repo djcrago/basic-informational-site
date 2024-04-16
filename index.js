@@ -11,6 +11,9 @@ server.on('request', async (req, res) => {
   if (requestURL.includes('css')) {
     res.setHeader('Content-Type', 'text/css');
   }
+  if (requestURL.includes('js')) {
+    res.setHeader('Content-Type', 'text/js');
+  }
   res.end(await getFile(requestURL));
 });
 
