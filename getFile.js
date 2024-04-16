@@ -10,6 +10,10 @@ export default async function getFile(path) {
       requestedFile = await fs.readFile('./about.html');
     } else if (path === '/contact-me') {
       requestedFile = await fs.readFile('./contact-me.html');
+    } else if (path === '/style.css') {
+      requestedFile = await fs.readFile('./style.css');
+    } else if (path === '/favicon.ico') {
+      return;
     } else {
       requestedFile = await fs.readFile('./404.html');
     }

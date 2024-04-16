@@ -6,8 +6,12 @@ import getFile from './getFile.js';
 const server = http.createServer();
 
 server.on('request', async (req, res) => {
+  const requestURL = req.url;
   res.setHeader('Content-Type', 'text/html');
-  res.end(await getFile(req.url));
+  if (requestURL.includes('css')) {
+    res.setHeader('Content-Type', 'text/css');
+  }
+  res.end(await getFile(requestURL));
 });
 
 server.listen(process.env.PORT, () => {
