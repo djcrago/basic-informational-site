@@ -6,10 +6,13 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node --watch --env-file=.env ./index"
+    "server": "node --watch ./index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }

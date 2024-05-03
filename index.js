@@ -2,6 +2,7 @@
 
 import http from 'http';
 import getFile from './getFile.js';
+import 'dotenv/config';
 
 const server = http.createServer();
 
